@@ -8,7 +8,7 @@ class Server {
         this.app = express();
         this.port = process.env.PORT; 
 
-        //paths
+
     this.basePath = '/api/v1';
     this.usersPath = `${this.basePath}/users`;
 

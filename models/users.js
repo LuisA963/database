@@ -48,9 +48,21 @@ const usersModel = {
                            ?,?,?,?,?,?,?,?
                          )
                          `,
-                         updateRow:`
-                            Pendiente
-                       `,
+                         updateRow: `
+                            UPDATE
+                                Users
+                             SET
+                               username =?,
+                               password =?,
+                               email =?,
+                               name =?,
+                               lastname = ?,
+                               phonenumber =?,
+                               role_id =?,
+                               is_active =?
+                         WHERE
+                             id = ?
+                            `,
                        deleteRow:`
                             UPDATE
                                 Users
